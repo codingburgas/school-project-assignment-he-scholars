@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PokeSkul\\source\\repos\\The Scholars\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EB9A5CDA-1F4E-43E3-B153-01F21694BD1B}|..\\The Scholars\\The Scholars\\The Scholars.vcxproj|C:\\Users\\PokeSkul\\source\\repos\\The Scholars\\The Scholars\\The Scholars.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EB9A5CDA-1F4E-43E3-B153-01F21694BD1B}|..\\The Scholars\\The Scholars\\The Scholars.vcxproj|solutionrelative:The Scholars\\The Scholars.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "The Scholars.cpp",
+              "DocumentMoniker": "C:\\Users\\PokeSkul\\source\\repos\\The Scholars\\The Scholars\\The Scholars.cpp",
+              "RelativeDocumentMoniker": "The Scholars\\The Scholars.cpp",
+              "ToolTip": "C:\\Users\\PokeSkul\\source\\repos\\The Scholars\\The Scholars\\The Scholars.cpp",
+              "RelativeToolTip": "The Scholars\\The Scholars.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-15T16:42:54.633Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
