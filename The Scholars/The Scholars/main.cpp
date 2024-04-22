@@ -1,7 +1,8 @@
 #include <iostream>
 #include <cstdlib>
 #include "Test.h"
-#include "ClearScreen.h" // Include ClearScreen.h header
+#include "ClearScreen.h"
+#include "compass.h"
 
 void displayMainMenu() {
     clearScreen(); // Clear the screen before displaying the menu
@@ -36,7 +37,7 @@ int main() {
         }
         case 2:
             std::cout << "Opening Student compass..." << std::endl;
-            // Add the code for the student compass here
+            
             break;
         case 3:
             std::cout << "Exiting program. Goodbye!" << std::endl;
