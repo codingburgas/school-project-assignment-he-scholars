@@ -32,12 +32,12 @@ int main() {
         case 1: {
             std::cout << "Starting Sciences test..." << std::endl;
             int score = SciencesTest();
-            std::cout << "Quiz completed! Your final score is: " << score << "/20" << std::endl; // Change the total questions count accordingly
+            std::cout << "Quiz completed! Your final score is: " << score << "/60" << std::endl; // Total questions: 20 (5 easy + 5 medium + 10 hard)
             break;
         }
         case 2:
             std::cout << "Opening Student compass..." << std::endl;
-            
+            studentCompass(); // Call the compass function
             break;
         case 3:
             std::cout << "Exiting program. Goodbye!" << std::endl;

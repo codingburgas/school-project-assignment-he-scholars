@@ -1,10 +1,14 @@
 #include "Test.h"
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 // Function to ask an easy question
 bool askEasyQuestion(const EasyQuestion& question) {
     std::cout << question.questionText << std::endl;
     std::cout << "Your answer: ";
     std::string userAnswer;
+    std::cin.ignore(); // Ignore the newline character in the input buffer
     std::getline(std::cin, userAnswer);
 
     return (userAnswer == question.correctAnswer);
@@ -15,6 +19,7 @@ bool askMediumQuestion(const MediumQuestion& question) {
     std::cout << question.questionText << std::endl;
     std::cout << "Your answer: ";
     std::string userAnswer;
+    std::cin.ignore(); // Ignore the newline character in the input buffer
     std::getline(std::cin, userAnswer);
 
     return (userAnswer == question.correctAnswer);
@@ -25,6 +30,7 @@ bool askHardQuestion(const HardQuestion& question) {
     std::cout << question.questionText << std::endl;
     std::cout << "Your answer: ";
     std::string userAnswer;
+    std::cin.ignore(); // Ignore the newline character in the input buffer
     std::getline(std::cin, userAnswer);
 
     return (userAnswer == question.correctAnswer);
@@ -38,6 +44,9 @@ T getRandomQuestion(const std::vector<T>& questions) {
 }
 
 int SciencesTest() {
+    // Seed the random number generator
+    srand(time(0));
+
     // Define easy, medium, and hard questions
     std::vector<EasyQuestion> easyQuestions = {
         {"What is the capital of France?", "Paris"},
@@ -70,8 +79,7 @@ int SciencesTest() {
         {"Which gas do plants absorb during photosynthesis?", "Carbon Dioxide"},
         {"What is the chemical symbol for gold?", "Au"},
         {"Who wrote 'To Kill a Mockingbird'?", "Harper Lee"},
-        {"What is the largest mammal in the world?", "Blue Whale"},
-        {"What causes tides in the oceans?", "Gravitational pull of the moon and sun"}
+        {"What is the largest mammal in the world?", "Blue Whale"}
     };
 
     std::vector<HardQuestion> hardQuestions = {
@@ -92,13 +100,9 @@ int SciencesTest() {
     int score = 0;
 
     // Ask random easy questions, starting from the first one
-    for (int i = 0; i < 2; ++i) {
+    for (int i = 0; i < 5; ++i) { // 5 Easy Questions
         EasyQuestion easyQuestion = getRandomQuestion(easyQuestions);
-        std::cout << easyQuestion.questionText << std::endl;
-        std::cout << "Your answer: ";
-        std::string userAnswer;
-        std::getline(std::cin, userAnswer);
-        if (userAnswer == easyQuestion.correctAnswer) {
+        if (askEasyQuestion(easyQuestion)) {
             std::cout << "Correct!" << std::endl;
             score += 1; // Increment score for each correct answer
         }
@@ -109,13 +113,9 @@ int SciencesTest() {
     }
 
     // Ask random medium questions, starting from the first one
-    for (int i = 0; i < 2; ++i) {
+    for (int i = 0; i < 5; ++i) { // 5 Medium Questions
         MediumQuestion mediumQuestion = getRandomQuestion(mediumQuestions);
-        std::cout << mediumQuestion.questionText << std::endl;
-        std::cout << "Your answer: ";
-        std::string userAnswer;
-        std::getline(std::cin, userAnswer);
-        if (userAnswer == mediumQuestion.correctAnswer) {
+        if (askMediumQuestion(mediumQuestion)) {
             std::cout << "Correct!" << std::endl;
             score += 2; // Increment score for each correct answer
         }
@@ -126,13 +126,9 @@ int SciencesTest() {
     }
 
     // Ask random hard questions, starting from the first one
-    for (int i = 0; i < 1; ++i) {
+    for (int i = 0; i < 10; ++i) { // 10 Hard Questions
         HardQuestion hardQuestion = getRandomQuestion(hardQuestions);
-        std::cout << hardQuestion.questionText << std::endl;
-        std::cout << "Your answer: ";
-        std::string userAnswer;
-        std::getline(std::cin, userAnswer);
-        if (userAnswer == hardQuestion.correctAnswer) {
+        if (askHardQuestion(hardQuestion)) {
             std::cout << "Correct!" << std::endl;
             score += 3; // Increment score for each correct answer
         }
